@@ -1,0 +1,7 @@
+interface:
+  display_name: "Frontend Developer"
+  short_description: "Senior frontend implementation"
+  default_prompt: "Use $frontend-developer to implement the frontend changes from the mentor design."
+
+policy:
+  allow_implicit_invocation: true

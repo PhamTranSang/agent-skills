@@ -1,0 +1,7 @@
+interface:
+  display_name: "Engineering Mentor"
+  short_description: "Senior guidance for software work"
+  default_prompt: "Use $engineering-mentor to guide me through this software engineering task with trade-offs, implementation advice, and review-level rigor."
+
+policy:
+  allow_implicit_invocation: true

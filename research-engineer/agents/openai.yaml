@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Engineer"
+  short_description: "Sourced engineering research"
+  default_prompt: "Use $research-engineer to research this engineering topic from official docs, best practices, common pitfalls, and reputable sources."
+
+policy:
+  allow_implicit_invocation: true

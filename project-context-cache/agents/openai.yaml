@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Context Cache"
+  short_description: "Reusable project context memory"
+  default_prompt: "Use $project-context-cache to read or refresh this repository context before making project-specific changes."

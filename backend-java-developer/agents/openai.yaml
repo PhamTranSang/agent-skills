@@ -1,0 +1,4 @@
+interface:
+  display_name: "Backend Java Developer"
+  short_description: "Senior Java backend implementation"
+  default_prompt: "Use $backend-java-developer to implement the backend Java changes from the mentor design."
