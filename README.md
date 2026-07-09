@@ -1,8 +1,9 @@
 # Agent Skills
 
-Bộ skill templates cho agent mode, tập trung vào 5 vai trò:
+Bộ skill templates cho agent mode, tập trung vào 6 vai trò:
 
 - engineering-mentor: định hướng giải pháp, trade-off, review mindset
+- product-owner-planner: bóc scope, chia ticket, handoff với mentor kỹ thuật
 - research-engineer: nghiên cứu có nguồn dẫn chiếu trước khi quyết định
 - backend-java-developer: implement backend Java production-grade
 - frontend-developer: implement frontend production-grade
@@ -30,6 +31,34 @@ agent-skills/
   engineering-mentor/
     SKILL.md
     agents/openai.yaml
+  product-owner-planner/
+    SKILL.md
+    agents/openai.yaml
+    references/
+      rules/
+        operating-rules.md
+        phase-plan-structure.md
+        breakdown-granularity-rules.md
+        opinionated-planning-rules.md
+        coordination.md
+      templates/
+        ticket-templates.md
+        scenario-guidance.md
+        user-story-template.md
+        task-template.md
+        bug-template.md
+        spike-template.md
+        security-infra-guidance.md
+      examples/
+        examples.md
+        example-ambiguous-intake.md
+        example-breakdown-granularity.md
+        example-feature-breakdown.md
+        example-phase-plan-files.md
+        example-phase-roadmap.md
+        example-security-auth.md
+        example-ticket-splitting.md
+        example-ticket-types.md
   frontend-developer/
     SKILL.md
     agents/openai.yaml
@@ -53,7 +82,7 @@ agent-skills/
 
 - 1 skill = 1 role rõ ràng, không chồng chéo phạm vi
 - SKILL.md là router: hướng dẫn vai trò, workflow, output contract
-- references/* chứa guidance theo stack/chủ đề
+- references/rules, references/templates, references/examples chứa guidance theo stack/chủ đề hoặc theo loại đầu ra
 - agents/openai.yaml khai báo display name, short description, default prompt, policy invocation
 - Tối ưu cho tasks thực chiến: research -> design -> implement -> review
 
@@ -71,6 +100,21 @@ Dùng khi cần:
 
 - đề xuất 1 hướng ưu tiên kèm lý do
 - nếu cần, đề xuất handoff sang backend/frontend developer
+
+### product-owner-planner
+
+Dùng khi cần:
+
+- phân tích feature thô thành scope, assumptions, dependencies
+- viết backlog ticket cho Jira/Azure DevOps
+- tách user story, task, bug, spike theo đúng loại việc
+- phối hợp với engineering-mentor để kiểm tra feasibility
+
+Đầu ra kỳ vọng:
+
+- plan triển khai có thể handoff ngay cho team
+- ticket breakdown rõ ràng, đúng format, đúng mức ưu tiên
+- rủi ro và câu hỏi mở được nêu ra trước khi dev bắt tay vào làm
 
 ### research-engineer
 
@@ -125,13 +169,15 @@ Dùng khi cần:
 
 1. project-context-cache
 2. research-engineer (nếu bài toán nhạy cảm version/spec)
-3. engineering-mentor
-4. backend-java-developer hoặc frontend-developer
+3. product-owner-planner
+4. engineering-mentor
+5. backend-java-developer hoặc frontend-developer
 
 ### 2) Direct implementation
 
-1. engineering-mentor (chốt hướng ngắn)
-2. implementer phù hợp stack
+1. product-owner-planner (chốt scope và ticket)
+2. engineering-mentor (chốt hướng ngắn và feasibility)
+3. implementer phù hợp stack
 
 ### 3) Deep research task
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Product Owner Planner"
+  short_description: "Senior BA/PO planning and backlog breakdown"
+  default_prompt: "Use $product-owner-planner to turn the rough feature idea into a backlog-ready delivery plan with milestones, stories, tasks, and risks, then hand the draft to $engineering-mentor for technical feasibility and implementation slicing."
+
+policy:
+  allow_implicit_invocation: true
