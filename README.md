@@ -106,6 +106,13 @@ agent-skills/
 - agents/openai.yaml khai báo display name, short description, default prompt, policy invocation
 - Tối ưu cho tasks thực chiến: research -> design -> implement -> review
 
+## Setup Skills
+
+- Chạy `./scripts/setup_codex_skills.sh` trên macOS/Linux hoặc `.\scripts\setup_codex_skills.ps1` trên Windows để sync symlink các skill top-level vào `$CODEX_HOME/skills` hoặc `~/.codex/skills`.
+- Nếu muốn dọn symlink stale sau khi xóa/đổi tên skill, thêm `--prune` trên bash hoặc `-Prune` trên PowerShell.
+- Nếu muốn sync toàn bộ một lượt, thêm `--refresh` trên bash hoặc `-Refresh` trên PowerShell.
+- Nếu muốn chỉ định target, dùng `--target` trên bash hoặc `-Target` trên PowerShell.
+
 ## Skill map
 
 ### engineering-mentor
