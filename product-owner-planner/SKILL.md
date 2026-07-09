@@ -5,22 +5,17 @@ description: Senior product owner and business analyst skill for turning rough f
 
 # Product Owner Planner
 
-Use the rules in `references/` as the operating contract for this skill.
+Use the rules in `../docs/planner/index.md` and `../shared/rules/coordination.md` as the operating contract for this skill.
 
 ## Workflow
 
-1. Read the operating rules first.
-2. Break the idea into scope, non-scope, assumptions, risks, and a backlog-ready breakdown.
-3. Load only the ticket templates, scenario guidance, and examples that match the task.
-4. Hand the draft plan to `engineering-mentor` when technical validation or implementation slicing is needed.
-5. Merge the mentor feedback into the final backlog.
+1. Read `../docs/planner/index.md` first.
+2. Read `../shared/rules/coordination.md` only when the task needs handoff or validation with `engineering-mentor`.
+3. Break the idea into scope, non-scope, assumptions, risks, and a backlog-ready breakdown.
+4. Load only the ticket templates, scenario guidance, and examples that match the task.
+5. Merge mentor feedback into the final backlog.
 
 ## Operational Rules
 
-- [Operating rules](references/rules/operating-rules.md)
-- [Phase plan structure](references/rules/phase-plan-structure.md)
-- [Breakdown granularity rules](references/rules/breakdown-granularity-rules.md)
-- [Opinionated planning rules](references/rules/opinionated-planning-rules.md)
-- [Ticket templates](references/templates/ticket-templates.md)
-- [Examples](references/examples/examples.md)
-- [Coordination with engineering mentor](references/rules/coordination.md)
+- [Shared coordination rule](../shared/rules/coordination.md)
+- [Planner docs index](../docs/planner/index.md)

@@ -12,7 +12,8 @@ Bộ skill templates cho agent mode, tập trung vào 6 vai trò:
 Mục tiêu của repo:
 
 - Chuẩn hóa cách prompt và phạm vi trách nhiệm theo từng vai trò
-- Tách phần hướng dẫn tổng quan (SKILL.md) và tài liệu chuyên sâu (references)
+- Tách phần hướng dẫn tổng quan (SKILL.md) và tài liệu chuyên sâu (docs)
+- Tách context chung sang `shared/` khi nhiều skill dùng lại cùng một scaffold
 - Hỗ trợ luồng làm việc mentor -> implementer rõ ràng, có handoff
 
 ## Cấu trúc
@@ -22,19 +23,38 @@ agent-skills/
   backend-java-developer/
     SKILL.md
     agents/openai.yaml
-    references/
-      build-tooling.md
-      java-library.md
-      java-modern.md
-      spring-boot.md
-      testing.md
   engineering-mentor/
     SKILL.md
     agents/openai.yaml
-  product-owner-planner/
-    SKILL.md
-    agents/openai.yaml
-    references/
+  shared/
+    index.md
+    rules/
+      project-context.md
+      coordination.md
+      completion.md
+      testing-and-commands.md
+  docs/
+    backend/
+      index.md
+      rules/
+        role.md
+        stack-intake.md
+        implementation-standards.md
+        testing-and-commands.md
+      tech/
+        index.md
+    frontend/
+      index.md
+      rules/
+        role.md
+        stack-intake.md
+        implementation-standards.md
+        testing-and-commands.md
+        completion.md
+      tech/
+        index.md
+    planner/
+      index.md
       rules/
         operating-rules.md
         phase-plan-structure.md
@@ -59,21 +79,20 @@ agent-skills/
         example-security-auth.md
         example-ticket-splitting.md
         example-ticket-types.md
-  frontend-developer/
+  backend-java-developer/
     SKILL.md
     agents/openai.yaml
-    references/
-      angular.md
-      app-builder.md
-      build-tooling.md
-      react-next-vite.md
-      styling.md
-      vue-nuxt.md
   project-context-cache/
     SKILL.md
     agents/openai.yaml
     scripts/generate_project_context.py
   research-engineer/
+    SKILL.md
+    agents/openai.yaml
+  frontend-developer/
+    SKILL.md
+    agents/openai.yaml
+  product-owner-planner/
     SKILL.md
     agents/openai.yaml
 ```
@@ -82,7 +101,8 @@ agent-skills/
 
 - 1 skill = 1 role rõ ràng, không chồng chéo phạm vi
 - SKILL.md là router: hướng dẫn vai trò, workflow, output contract
-- references/rules, references/templates, references/examples chứa guidance theo stack/chủ đề hoặc theo loại đầu ra
+- `shared/rules` chứa scaffold chung cho nhiều skill
+- `docs/<skill>` chứa detail/specs theo domain của skill đó
 - agents/openai.yaml khai báo display name, short description, default prompt, policy invocation
 - Tối ưu cho tasks thực chiến: research -> design -> implement -> review
 
@@ -219,7 +239,7 @@ Khi thêm skill mới:
 1. Tạo folder mới theo mẫu:
    - SKILL.md
    - agents/openai.yaml
-   - references/* (nếu cần)
+   - docs/<skill>/* (nếu cần)
 2. Định nghĩa rõ boundary và handoff với skill hiện có.
 3. Thêm 1-2 prompt mẫu để dễ discover.
 4. Kiểm tra overlap với skill khác, nếu trùng thì tách lại scope.

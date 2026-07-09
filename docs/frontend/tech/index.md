@@ -1,22 +1,33 @@
-# Frontend Reference Index
+# Frontend Tech Index
 
-Use this file when you need to choose the right frontend reference quickly.
+## Routing and framework selection
 
-Use the files below when the task touches the relevant area:
-
+- [Frontend reference index](../index.md)
 - [Framework selection](framework-selection.md)
+
+## Framework stacks
+
 - [React stack](react-stack.md)
 - [Next.js](nextjs.md)
 - [Vite](vite.md)
 - [Angular stack](angular-stack.md)
 - [Vue and Nuxt](vue-nuxt.md)
+
+## Shared decisions
+
 - [Styling selection](styling-selection.md)
+- [State management selection](state-selection.md)
+- [Routing selection](routing-selection.md)
+- [Frontend testing selection](testing-selection.md)
+
+## Library and tool details
+
 - [Tailwind CSS](tailwind.md)
 - [UI libraries](ui-libraries.md)
-- [State management selection](state-selection.md)
 - [React state management](react-state.md)
-- [Routing selection](routing-selection.md)
 - [React routing](react-routing.md)
 - [Build and workspace](build-workspace.md)
-- [Testing selection](testing-selection.md)
+
+## App builder
+
 - [App builder mode](app-builder.md)
