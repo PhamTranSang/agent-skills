@@ -1,4 +1,4 @@
 interface:
   display_name: "Backend Java Developer"
-  short_description: "Senior Java backend implementation"
-  default_prompt: "Use $backend-java-developer to implement the backend Java changes from the mentor design."
+  short_description: "Senior Java backend implementation and build architecture"
+  default_prompt: "Use $backend-java-developer to implement the backend Java changes from the mentor design. When the task touches build tooling, module boundaries, or bootstrap/environment setup, surface concrete options and ask for confirmation before changing the structure."

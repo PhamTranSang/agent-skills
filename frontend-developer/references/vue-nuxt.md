@@ -1,5 +1,7 @@
 # Vue And Nuxt
 
+Use this file when the task is about Vue Composition API, Nuxt routing, SSR boundaries, or store conventions.
+
 - Prefer Composition API if the project uses it.
 - Keep props and emits explicit.
 - Avoid mutating props.

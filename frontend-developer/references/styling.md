@@ -1,5 +1,7 @@
 # Styling And UI Libraries
 
+Use this file when the task is about CSS architecture, Tailwind setup, or component library styling conventions.
+
 ## CSS, SCSS, Sass
 
 - Follow the project's existing styling architecture: global styles, CSS modules, component styles, utility classes, or design tokens.

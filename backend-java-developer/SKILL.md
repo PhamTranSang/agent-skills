@@ -5,82 +5,59 @@ description: Senior/staff Java backend implementation skill. Use when the user a
 
 # Backend Java Developer
 
-## Role
+Use the rules in `references/` as the operating contract for this skill.
 
-Act as a senior/staff backend Java engineer who can implement the design produced by `$engineering-mentor`. Focus on shipping correct, maintainable Java backend code while respecting the repository's existing architecture.
+## Workflow
 
-This file is the router. Load only the reference needed for the current stack or task:
+1. Read the operational rules first.
+2. Load only the technical references that match the task.
+3. If the task touches build tooling, module boundaries, or bootstrap/environment setup, surface concrete options and ask for confirmation before changing the structure.
 
-- Modern Java implementation, boundaries, exceptions, security posture: `references/java-modern.md`
-- Spring Boot services, REST APIs, persistence, configuration: `references/spring-boot.md`
-- Maven, Gradle Groovy/Kotlin DSL, multi-module, build logic, cache/performance: `references/build-tooling.md`
-- Java libraries, public API design, JPMS, compatibility: `references/java-library.md`
-- Test strategy, JUnit, Mockito, AssertJ, Testcontainers, Spring test slices: `references/testing.md`
+## Operational Rules
 
-## Coordination With Engineering Mentor
+- [Role and intent](references/rules/role.md)
+- [Coordination with engineering mentor](references/rules/coordination.md)
+- [Project context and discovery](references/rules/project-context.md)
+- [Stack intake and setup options](references/rules/stack-intake.md)
+- [Implementation standards](references/rules/implementation-standards.md)
+- [Testing and commands](references/rules/testing-and-commands.md)
+- [Completion checklist](references/rules/completion.md)
 
-When invoked after `$engineering-mentor`:
+## Technical References
 
-1. Treat the mentor's selected approach as the implementation plan.
-2. Re-check the relevant code before editing; do not implement from the plan blindly.
-3. Preserve the trade-offs and constraints identified by the mentor.
-4. If implementation details contradict the mentor plan, explain the mismatch and adapt with the smallest coherent change.
+Load these with the operational rules above when the task touches the relevant stack area:
 
-When invoked directly and the task needs design choices, briefly frame the options, choose one, then implement.
+### Core Architecture
 
-## Project Context
+- [Modern Java implementation](references/tech/java-modern.md)
+- [Module boundaries](references/tech/module-boundaries.md)
+- [Library contract](references/tech/library-contract.md)
 
-If `.codex/project-context.md` exists in the project, read it before broad discovery. If `$project-context-cache` is also active, use its context first.
+### Spring Ecosystem
 
-Prefer the actual project stack over generic Java assumptions. Inspect existing build files, package/module layout, framework config, tests, and public APIs before changing architecture.
+- [Spring ecosystem index](references/tech/spring-framework.md)
+- [Spring Core guidance](references/tech/spring-core.md)
+- [Spring Config guidance](references/tech/spring-config.md)
+- [Spring Data guidance](references/tech/spring-data.md)
+- [Spring Security guidance](references/tech/spring-security.md)
+- [Spring Messaging guidance](references/tech/spring-messaging.md)
+- [Spring Testing guidance](references/tech/spring-testing.md)
+- [Spring Cloud guidance](references/tech/spring-cloud.md)
+- [Spring Boot guidance](references/tech/spring-boot.md)
 
-## Stack Intake Options
+### Build And Modules
 
-When the user provides a backend Java stack for a new project, scaffold, major setup, or ambiguous implementation request, present concise options before coding. Ask only for decisions that are not already determined by an existing project.
+- [Build tooling index](references/tech/build-tooling.md)
+- [Gradle guidance](references/tech/gradle.md)
+- [Gradle multi-project details](references/tech/gradle-multi-project.md)
+- [Gradle cache details](references/tech/gradle-cache.md)
+- [Maven guidance](references/tech/maven.md)
+- [Maven POM details](references/tech/maven-pom.md)
+- [Maven multi-module details](references/tech/maven-multi-module.md)
+- [Maven model and plugin control](references/tech/maven-model.md)
+- [Build environment](references/tech/build-environment.md)
+- [Bootstrap details](references/tech/bootstrap.md)
 
-Keep the option set short and recommend defaults from the user's constraints:
+### Testing
 
-- Build tool: Maven, Gradle Groovy DSL, Gradle Kotlin DSL.
-- Project shape: single module, Maven multi-module, Gradle multi-project, JPMS modules.
-- Shared build logic: Maven parent/BOM, Gradle convention plugins in `build-logic`, `buildSrc` only for small/local shared logic.
-- Framework: plain Java library, Spring Boot, Spring Web/WebFlux, Micronaut, Quarkus, or existing project framework.
-- Data/integration: JDBC/JPA, Spring Data, jOOQ, Flyway/Liquibase, messaging, HTTP client, or none.
-- Testing: JUnit 5, Mockito, AssertJ, Testcontainers, Spring Boot test slices, integration tests.
-- Build performance: Gradle local build cache, remote cache, configuration cache, parallel builds, Maven wrapper/parallel builds where appropriate.
-
-Example:
-
-```text
-Trước khi implement/setup, mình cần chốt vài option: Maven hay Gradle? Nếu Gradle thì Groovy hay Kotlin DSL? Single module hay multi-module? Shared build logic dùng build-logic hay buildSrc? Có bật Gradle build cache/configuration cache không?
-```
-
-If the user asks to "choose for me", select the simplest stack that satisfies the requirements and state the choice briefly.
-
-## Implementation Standards
-
-- Use modern Java idioms where they improve clarity.
-- Do not introduce frameworks or dependencies unless they solve a real problem and fit the existing project.
-- Keep boundaries clear: API vs implementation, domain vs infrastructure, controller vs service vs repository.
-- Make invalid states hard to represent when practical.
-- Prefer explicit errors and domain-specific exceptions over broad runtime failures.
-- Keep security-sensitive code conservative: validate inputs, avoid unsafe defaults, and add negative cases.
-- Keep edits scoped to the requested behavior.
-
-## Testing And Commands
-
-Design the tests or validation steps that should be run. Do not run shell commands, scripts, test suites, or validation scripts unless the user's current preferences permit it or the user explicitly grants permission for this task.
-
-When command execution is restricted, state the exact commands the user may allow, such as:
-
-```bash
-./gradlew test
-mvn test
-```
-
-## Completion
-
-After implementation, summarize:
-
-- what changed
-- why it matches the selected design
-- tests or validation that should be run, including whether they were skipped due to user preference
+- [Testing reference](references/tech/testing.md)

@@ -1,5 +1,7 @@
 # React, Next.js, And Vite
 
+Use this file when the task is about React component behavior, Next.js app structure, or Vite-based frontend implementation.
+
 ## React
 
 - Prefer function components and hooks.

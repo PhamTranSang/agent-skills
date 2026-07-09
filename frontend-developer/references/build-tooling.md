@@ -1,5 +1,7 @@
 # Build Tooling And Monorepos
 
+Use this file when the task is about frontend build config, workspace topology, or monorepo orchestration.
+
 ## Vite
 
 - Inspect `vite.config.*`, plugin setup, aliases, env handling, test config, and library/app mode before changing config.

@@ -1,6 +1,6 @@
 # Agent Skills
 
-Bộ skill templates cho Copilot agent mode, tập trung vào 5 vai trò:
+Bộ skill templates cho agent mode, tập trung vào 5 vai trò:
 
 - engineering-mentor: định hướng giải pháp, trade-off, review mindset
 - research-engineer: nghiên cứu có nguồn dẫn chiếu trước khi quyết định

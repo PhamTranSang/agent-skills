@@ -1,5 +1,7 @@
 # Spring Boot
 
+Use this file with `spring-framework.md` when the task is about application bootstrapping, runtime wiring, or web/persistence integration.
+
 ## Application Structure
 
 - Follow existing controller/service/repository/configuration conventions.

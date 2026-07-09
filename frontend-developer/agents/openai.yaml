@@ -1,7 +1,7 @@
 interface:
   display_name: "Frontend Developer"
-  short_description: "Senior frontend implementation"
-  default_prompt: "Use $frontend-developer to implement the frontend changes from the mentor design."
+  short_description: "Senior frontend implementation and UI architecture"
+  default_prompt: "Use $frontend-developer to implement the frontend changes from the mentor design. When the task touches framework choice, styling system choice, workspace topology, or app-builder workflow, surface concrete options and ask for confirmation before changing the structure."
 
 policy:
   allow_implicit_invocation: true

@@ -1,5 +1,7 @@
 # v0-Like App Builder Mode
 
+Use this file when the user asks for a full page, dashboard, landing page, SaaS UI, admin tool, ecommerce screen, internal tool, prototype, or "build me an app/site" request.
+
 Use when the user asks for a full page, dashboard, landing page, SaaS UI, admin tool, ecommerce screen, internal tool, prototype, or "build me an app/site" request.
 
 ## Workflow

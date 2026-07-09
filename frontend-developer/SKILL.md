@@ -5,18 +5,36 @@ description: Senior/staff frontend implementation skill. Use when the user asks 
 
 # Frontend Developer
 
+## Workflow
+
+1. Read the operational role first.
+2. Load only the frontend references that match the task.
+3. If the task touches framework choice, styling system choice, workspace topology, or app-builder workflow, surface concrete options and ask for confirmation before changing the structure.
+
 ## Role
 
 Act as a senior/staff frontend engineer who can implement the design produced by `$engineering-mentor`. Focus on usable, maintainable, accessible frontend code that fits the existing application's framework and design conventions.
 
 This file is the router. Load only the reference needed for the current stack or task:
 
-- React, Next.js, Vite, React performance, React composition: `references/react-next-vite.md`
-- Angular: `references/angular.md`
-- Vue/Nuxt: `references/vue-nuxt.md`
-- CSS, SCSS, Sass, Tailwind CSS, Material UI, Ant Design, design systems: `references/styling.md`
-- Vite config, package managers, workspaces, Nx, Turborepo: `references/build-tooling.md`
-- v0-like full app/page generation and local preview workflow: `references/app-builder.md`
+### Core Frontend
+
+- [Frontend reference index](references/index.md)
+- [React, Next.js, and Vite](references/react-next-vite.md)
+- [Angular](references/angular.md)
+- [Vue and Nuxt](references/vue-nuxt.md)
+
+### Styling And UI
+
+- [Styling and UI libraries](references/styling.md)
+
+### Build And Workspace
+
+- [Build tooling and monorepos](references/build-tooling.md)
+
+### App Builder
+
+- [App builder mode](references/app-builder.md)
 
 ## Coordination With Engineering Mentor
 

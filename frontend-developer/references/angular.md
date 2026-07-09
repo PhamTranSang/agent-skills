@@ -1,5 +1,7 @@
 # Angular
 
+Use this file when the task is about Angular component structure, forms, routing, DI, or RxJS conventions.
+
 - Prefer clear component/service boundaries.
 - Follow the project's standalone component or NgModule convention.
 - Keep templates readable and push complex logic into TypeScript.
