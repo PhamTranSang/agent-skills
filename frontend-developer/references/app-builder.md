@@ -2,8 +2,6 @@
 
 Use this file when the user asks for a full page, dashboard, landing page, SaaS UI, admin tool, ecommerce screen, internal tool, prototype, or "build me an app/site" request.
 
-Use when the user asks for a full page, dashboard, landing page, SaaS UI, admin tool, ecommerce screen, internal tool, prototype, or "build me an app/site" request.
-
 ## Workflow
 
 1. Extract product intent: audience, primary workflow, pages/screens, data shown, actions, and visual tone.
@@ -34,6 +32,12 @@ Do not run install, build, test, lint, typecheck, Playwright, Cypress, validatio
 
 - React SPA: Vite + TypeScript + CSS modules or Tailwind, depending on design-system needs.
 - React full-stack/product app: Next.js when routing, SSR, server components, or app-level conventions matter.
-- Angular app: Angular CLI/Nx depending on whether it is single app or monorepo.
+- Angular app: Angular CLI or Nx depending on whether it is single app or monorepo.
 - Vue SPA: Vite + Vue + TypeScript; Nuxt when SSR/routing conventions matter.
 - Multi-app frontend platform: Nx when strong project graph/generators/enforced boundaries matter; Turborepo when package-script orchestration and cache are enough.
+
+## Reference Routing
+
+- Use `framework-selection.md` when the framework choice is still open.
+- Use `styling-selection.md` when choosing between Tailwind, CSS-based styling, or UI libraries.
+- Use `build-workspace.md` when the app may need Nx, Turborepo, or workspace-level structure.

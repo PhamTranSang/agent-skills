@@ -1,14 +1,8 @@
-# Build Tooling And Monorepos
+# Build And Workspace
 
-Use this file when the task is about frontend build config, workspace topology, or monorepo orchestration.
+Use this file when the task is about package managers, workspaces, Nx, Turborepo, or broader frontend workspace topology.
 
-## Vite
-
-- Inspect `vite.config.*`, plugin setup, aliases, env handling, test config, and library/app mode before changing config.
-- Keep aliases aligned with TypeScript config.
-- Avoid adding plugins unless the framework or feature requires them.
-
-## Package Managers And Workspaces
+## Package Managers
 
 - Detect npm, pnpm, yarn, or bun from lockfiles and `packageManager`.
 - Preserve workspace layout and script conventions.
